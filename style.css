@@ -67,7 +67,6 @@ header > .headerBody {
 }
 
 header > .bottomOutline {
-  box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.7);
   background: linear-gradient(
     90deg,
     rgb(44, 44, 44) 0%,
