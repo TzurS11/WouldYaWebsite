@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="background"></div>
     <header>
       <div class="headerBody">
         <p><img src="assets/favicon.png" />WouldYa</p>
         <div class="rightSideHeader">
           <button
             class="discordButton"
-            onClick="window.open('https://discord.com/oauth2/authorize?client_id=1063817771114315816&permissions=3072&scope=bot%20applications.commands', '_blank')"
+            onClick="alertPopup('A discord server is not available yet')"
           >
             <img src="assets/discordlogo.png" />
           </button>
@@ -33,11 +34,12 @@
       </div>
       <div class="bottomOutline"></div>
     </header>
-    <div class="features">
-      <p class="title">Questions</p>
+    <div style="height: 100px;"></div>
+    <div class="features questions">
+      <p class="title">Questions<p class="command" onclick="copyToClipboardAndPopup('/question')">/question</p></p>
       <h class="description"
-        >There are more than <span class="discordColor">3000</span> unique
-        questions!</h
+        >There are more than <span class="discordColor" id="incrementQuestions">3000</span> unique
+        questions! And more everyday!</h
       >
       <h class="example">"Would you rather electricity or water?"</h>
       <h class="example"
@@ -49,12 +51,13 @@
         little thing?"</h
       >
     </div>
-    <div class="features">
+    <div class="features interactions">
       <p class="title">Interactions</p>
       <h class="description"
         >Boost your server interaction and activity.<br />Talk about questions
         and choises with your friends and vote on every question.</h
       >
+      <h class="example">Voting is global across all servers. You may choose to make your account private.</h>
       <div class="interactionButtonsRow">
         <button class="interactionButton left">
           <img
@@ -68,6 +71,27 @@
         </button>
       </div>
     </div>
+    <div class="features suggestions">
+        <p class="title">Suggestions<p class="command" onclick="copyToClipboardAndPopup('/suggest')">/suggest</p></p>
+        <h class="description"
+          >Get involved in the community by suggesting questions.<br>You will be notified if your question is accepted or denied.</h
+        >
+        <h class="example">Suggesting troll questions will limit your access to the bot.</h>
+      </div>
+      <div class="features stats">
+        <p class="title">Stats<p class="command" onclick="copyToClipboardAndPopup('/stats')">/stats</p></p>
+        <h class="description">Get your stats or someone else's stats. Voting ratio, Amount of questions answered, and more in the future</h>
+        <h class="example">this feature is currently WIP and is subject to change in the future.<br>it is currently not possible to set your profile private.</h>
+      </div>
+      
+
+      <div id="floatmessage" class='float-message' style="display:none;">
+        <div class='float-message-inner' id="floatmessageinner">
+            <p>Copied command to clipboard</p>
+        </div>
+      </div>
+     
     <script src="script.js"></script>
+    
   </body>
 </html>

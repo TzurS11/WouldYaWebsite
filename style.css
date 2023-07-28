@@ -14,6 +14,51 @@ body {
   color: white;
 }
 
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.background {
+  position: fixed;
+}
+
+.background > .bubble {
+  height: 100px;
+  width: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
 header > .headerBody {
   background-color: var(--secondary);
   display: flex;
@@ -22,6 +67,7 @@ header > .headerBody {
 }
 
 header > .bottomOutline {
+  box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.7);
   background: linear-gradient(
     90deg,
     rgb(44, 44, 44) 0%,
@@ -42,21 +88,17 @@ header > .headerBody > p {
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 20px;
-  background-color: rgb(55, 55, 55);
+  /* background-color: rgb(55, 55, 55); */
   padding-left: 20px;
   padding-right: 20px;
   /* transition: letter-spacing 0.5s; */
-}
-
-header > .headerBody > p:hover {
-  /* letter-spacing: 10px; */
 }
 
 header > .headerBody > .rightSideHeader {
   display: flex;
   margin-right: 10px;
   border-radius: 20px;
-  background-color: rgb(55, 55, 55);
+  /* background-color: rgb(55, 55, 55); */
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
@@ -139,8 +181,38 @@ p > img {
   background-color: var(--secondary);
   border-radius: 20px;
   margin-top: 40px;
+  margin-bottom: 40px;
   margin-left: var(--margin);
   margin-right: var(--margin);
+  box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.5);
+}
+.features.questions {
+  animation: fadeInAnimation ease 1s;
+  opacity: 0;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.features.interactions {
+  animation: fadeInAnimation ease 1s;
+  opacity: 0;
+  animation-delay: 0.25s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.features.suggestions {
+  animation: fadeInAnimation ease 1s;
+  opacity: 0;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.features.stats {
+  animation: fadeInAnimation ease 1s;
+  opacity: 0;
+  animation-delay: 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .features > .title {
@@ -151,6 +223,24 @@ p > img {
   letter-spacing: 3px;
   margin-left: 20px;
   padding-top: 10px;
+}
+
+.features > .command {
+  display: inline-block;
+  background-color: rgba(61, 66, 112, 255);
+  margin: 0;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-left: 20px;
+  transition: background-color 0.17s;
+  cursor: pointer;
+}
+.features > .command:hover {
+  background-color: rgba(88, 101, 242, 255);
 }
 
 .features > .description {
@@ -210,4 +300,24 @@ p > img {
 }
 .interactionButton.right:active {
   background-color: rgba(60, 69, 165, 255);
+}
+
+.float-message {
+  position: fixed;
+  z-index: 1001;
+  max-width: 400px;
+  bottom: 20px;
+  right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: black;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.float-message-inner {
+  position: relative;
 }
