@@ -12,6 +12,10 @@ body {
   padding: 0;
   font-family: "Rubik", sans-serif;
   color: white;
+
+  background: #333;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05) .1em, transparent .1em), linear-gradient(90deg, rgba(0, 0, 0, 0.05) .1em, transparent .1em);
+  background-size: 3em 3em;
 }
 
 @keyframes fadeInAnimation {
@@ -45,11 +49,11 @@ body {
 
 .background {
   position: fixed;
+  z-index: 0;
 }
 
 .background > .bubble {
   height: 100px;
-  width: 100px;
 }
 
 header {
@@ -179,7 +183,7 @@ p > img {
   --margin: 300px;
   background-color: var(--secondary);
   border-radius: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
   margin-left: var(--margin);
   margin-right: var(--margin);
@@ -280,6 +284,7 @@ p > img {
   height: 50px;
   cursor: pointer;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 .interactionButton.left {
   background-color: rgba(218, 55, 60, 255);
@@ -319,4 +324,53 @@ p > img {
 }
 .float-message-inner {
   position: relative;
+}
+
+.botstats {
+  background: linear-gradient(
+    90deg,
+    rgba(44, 44, 44,0) 0%,
+    rgba(230, 230, 230, 0.1) 50%,
+    rgba(44, 44, 44) 100%
+  );
+  /* height: 10px; */
+  z-index: 100;
+  margin-top: 20px;
+}
+
+.botstats > p {
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.rainbow-text {
+  background-image: repeating-linear-gradient(
+    45deg,
+    violet,
+    rgb(0, 132, 255),
+    green,
+    orange,
+    red,
+    violet
+  );
+  text-align: center;
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 24px;
+  animation: rainbow 8s ease infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
