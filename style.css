@@ -106,7 +106,7 @@ header > .headerBody > .rightSideHeader {
   justify-content: space-between;
 }
 
-header > .headerBody > .rightSideHeader > .addToServer {
+header > .headerBody > .rightSideHeader > a > .addToServer {
   background-color: var(--discord);
   border: none;
   border-radius: 30px;
@@ -122,11 +122,11 @@ header > .headerBody > .rightSideHeader > .addToServer {
   /* margin-right: 40px; */
   cursor: pointer;
 }
-header > .headerBody > .rightSideHeader > .addToServer:hover {
+header > .headerBody > .rightSideHeader > a > .addToServer:hover {
   filter: saturate(2);
 }
 
-header > .headerBody > .rightSideHeader > .githubButton {
+header > .headerBody > .rightSideHeader > a > .githubButton {
   background: none;
   border: none;
   font-weight: bold;
@@ -148,7 +148,7 @@ header > .headerBody > .rightSideHeader > .discordButton {
   opacity: 0.85;
 }
 
-header > .headerBody > .rightSideHeader > .githubButton > img {
+header > .headerBody > .rightSideHeader > a > .githubButton > img {
   height: 60px;
   cursor: pointer;
   border-radius: 100%;
@@ -160,7 +160,7 @@ header > .headerBody > .rightSideHeader > .discordButton > img {
   border-radius: 100%;
 }
 
-header > .headerBody > .rightSideHeader > .githubButton > img:hover {
+header > .headerBody > .rightSideHeader > a > .githubButton > img:hover {
   filter: contrast(10);
 }
 
