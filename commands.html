@@ -44,56 +44,54 @@
     <div class="bottomOutline"></div>
   </header>
   <div style="height: 100px;"></div>
-  <div class="botstats">
-    <p id="countservers"class = "rainbow-text">ENTERTAINING <span class="servercount">x</span> SERVERS!</p>
-  </div>
   <div class="features questions">
 
     <p class="title">Questions
+    <p class="command" onclick="copyToClipboardAndPopup('/question')">/question</p>
     </p>
-    <h class="description">There are <span class="discordColor questionsAmount">x</span> unique
-      questions and more are being added everyday!</h>
-    <h class="example">"Would you rather electricity or water?"</h>
-    <h class="example">"Would you rather clean your own home or hire someone to do it for
-      you?"</h>
-    <h class="example">"Would you rather have no emotions or be able to deeply feel every
-      little thing?"</h>
-
-    <h class="description">Boost your server interaction and activity.<br />Talk about questions
-      and choises with your friends and vote on every question.</h>
-    <h class="example">Voting is global across all servers. You may choose to make your account private.</h>
-    <div class="interactionButtonsRow">
-      <button class="interactionButton left">
-        <img src="https://cdn.discordapp.com/emojis/1068289807249309747.webp?size=44&quality=lossless" />
-      </button>
-      <button class="interactionButton right">
-        <img src="https://cdn.discordapp.com/emojis/1068289822592077864.webp?size=44&quality=lossless" />
-      </button>
-    </div>
-  </div>
+    <h class="description">Chooses a random Would You Rather question from the database.<br>Replies with the question and buttons to interact with it</h>
+    <h class="example">To prevent spamming the chat with embeds there is a green button to reroll a question.</h>
+</div>
   <div class="features interactions">
     
   </div>
   <div class="features suggestions">
     <p class="title">Suggestions
+    <p class="command" onclick="copyToClipboardAndPopup('/suggest')">/suggest</p>
     </p>
-    <h class="description">Get involved in the community by suggesting questions.<br>You will be notified if your
-      question is accepted or denied.</h>
+    <h class="description">The command will ask for a text which will have the question in it.<br>You may phrase your question however you like but it will be rephrased to better fit the bot<br>You will get a DM from the bot if you question was approved or denied</h>
     <h class="example">Suggesting troll questions will limit your access to the bot.</h>
   </div>
   <div class="features stats">
-    <p class="title">Stats
+    <p class="title">User Stats - WIP
+    <p class="command" onclick="copyToClipboardAndPopup('/stats')">/stats</p>
     </p>
-    <h class="description">Get your stats or someone else's stats. Voting ratio, Amount of questions answered, and more
-      in the future</h>
-    <h class="example">this feature is currently WIP and is subject to change in the future.<br>it is currently not
+    <h class="description">The command will ask you to put an id of a user. if kept empty it will choose your id.<br> Amount of questions answered, answer ratio, and more in the future</h>
+    <h class="example">this feature is currently work in progress and is subject to change in the future.<br>it is currently not
       possible to set your profile private.</h>
+  </div>
+  <div class="features stats">
+    <p class="title">Top Answered Questions
+    <p class="command" onclick="copyToClipboardAndPopup('/top')">/top</p>
+    </p>
+    <h class="description">Get the most answered question in the database.</h>
+  </div>
+  <div class="features stats">
+    <p class="title">Amount Of Questions
+    <p class="command" onclick="copyToClipboardAndPopup('/amount')">/amount</p>
+    </p>
+    <h class="description">Get the amount of available questions in the database.</h>
   </div>
   <div id="floatmessage" class='float-message' style="display:none;">
     <div class='float-message-inner' id="floatmessageinner">
       <p>Copied command to clipboard</p>
     </div>
   </div>
+
+  <div class="botstats">
+    <p id="countservers"class>Come back in the future for more features!</p>
+  </div>
+
   <script src="script.js"></script>
 </body>
 
