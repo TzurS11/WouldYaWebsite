@@ -21,6 +21,10 @@ body {
   background-size: 3em 3em;
 }
 
+a {
+  cursor: pointer;
+}
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -86,13 +90,14 @@ header > .bottomOutline {
 header > .headerBody > .leftSideHeader {
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 header > .headerBody > .leftSideHeader > .botName {
   margin: 0;
   font-size: 60px;
   line-height: 1.2;
-  margin-left: 10px;
+
   display: inline-block;
   letter-spacing: 3px;
   padding-top: 5px;
@@ -214,8 +219,11 @@ p > img {
   border-radius: 20px;
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: var(--margin);
-  margin-right: var(--margin);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: var(--margin);
+  margin-right: var(--margin); */
   box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.5);
 }
 .features.questions {
@@ -372,6 +380,8 @@ p > img {
   font-size: 60px;
   margin: 0;
   font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .rainbow-text {
