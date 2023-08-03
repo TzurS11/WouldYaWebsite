@@ -9,7 +9,7 @@
 body {
   background-color: var(--primary);
   margin: 0;
-  padding: 0;
+  padding: 0;;
   font-family: "Rubik", sans-serif;
   color: white;
   background: #333;
@@ -18,14 +18,14 @@ body {
       transparent 0.1em
     ),
     linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0.1em, transparent 0.1em);
-  background-size: 3em 3em;
+  background-size: 2em 2em;
 }
 
 a {
   cursor: pointer;
 }
 
-@keyframes fadeInAnimation {
+/* @keyframes fadeInAnimation {
   0% {
     opacity: 0;
     margin-left: 0;
@@ -33,7 +33,7 @@ a {
   100% {
     opacity: 1;
   }
-}
+} */
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -225,34 +225,6 @@ p > img {
   /* margin-left: var(--margin);
   margin-right: var(--margin); */
   box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.5);
-}
-.features.questions {
-  animation: fadeInAnimation ease 1s;
-  opacity: 0;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.features.interactions {
-  animation: fadeInAnimation ease 1s;
-  opacity: 0;
-  animation-delay: 0.25s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.features.suggestions {
-  animation: fadeInAnimation ease 1s;
-  opacity: 0;
-  animation-delay: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.features.stats {
-  animation: fadeInAnimation ease 1s;
-  opacity: 0;
-  animation-delay: 0.75s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 .features > .title {
