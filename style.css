@@ -25,6 +25,10 @@ a {
   cursor: pointer;
 }
 
+p {
+  word-wrap: break-word;
+}
+
 /* @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -75,6 +79,7 @@ header > .headerBody {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 header > .bottomOutline {
@@ -91,9 +96,9 @@ header > .headerBody > .leftSideHeader {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  flex-wrap: wrap;
 }
-
-header > .headerBody > .leftSideHeader > .botName {
+.botName {
   margin: 0;
   font-size: 60px;
   line-height: 1.2;
@@ -101,9 +106,9 @@ header > .headerBody > .leftSideHeader > .botName {
   display: inline-block;
   letter-spacing: 3px;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 0;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   border-radius: 20px;
   /* background-color: rgb(55, 55, 55); */
   padding-left: 20px;
@@ -111,11 +116,41 @@ header > .headerBody > .leftSideHeader > .botName {
   /* transition: letter-spacing 0.5s; */
 }
 
-
-
 header > .headerBody > .leftSideHeader > img {
   width: 60px;
   margin-left: 20px;
+}
+
+.bot-status {
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 0;
+  line-height: 0;
+  margin-bottom: 0;
+}
+
+.bot-status > .status-icon {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  width: 15px;
+  height: 15px;
+  line-height: 0;
+  margin-bottom: 0;
+}
+
+.servercount {
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.statstext {
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 header > .headerBody > .leftSideHeader > .pages,
@@ -164,18 +199,6 @@ header > .headerBody > .rightSideHeader > a > .addToServer {
 }
 header > .headerBody > .rightSideHeader > a > .addToServer:hover {
   filter: saturate(2);
-}
-
-header > .headerBody > .rightSideHeader > .bot-status {
-  font-size: 30px;
-  padding-left: 20px;
-  line-height: 0px;
-  top: 100px;
-}
-
-header > .headerBody > .rightSideHeader > .bot-status>.status-icon{
-  width: 30px;
-  height: 35px;
 }
 
 p > img {
@@ -308,6 +331,8 @@ p > img {
 }
 
 .botstats {
+  text-align: center;
+  justify-content: space-between;
   background: linear-gradient(
     90deg,
     rgba(44, 44, 44, 0) 0%,
@@ -320,7 +345,7 @@ p > img {
 }
 
 .botstats > p {
-  text-align: center;
+  display: inline-block;
   font-size: 60px;
   margin: 0;
   font-weight: bold;
