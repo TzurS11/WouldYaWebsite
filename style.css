@@ -9,7 +9,7 @@
 body {
   background-color: var(--primary);
   margin: 0;
-  padding: 0;;
+  padding: 0;
   font-family: "Rubik", sans-serif;
   color: white;
   background: #333;
@@ -111,6 +111,8 @@ header > .headerBody > .leftSideHeader > .botName {
   /* transition: letter-spacing 0.5s; */
 }
 
+
+
 header > .headerBody > .leftSideHeader > img {
   width: 60px;
   margin-left: 20px;
@@ -164,46 +166,16 @@ header > .headerBody > .rightSideHeader > a > .addToServer:hover {
   filter: saturate(2);
 }
 
-header > .headerBody > .rightSideHeader > a > .githubButton {
-  background: none;
-  border: none;
-  font-weight: bold;
-  color: white;
-  vertical-align: middle;
-  font-family: "Rubik", sans-serif;
-  margin-right: 10px;
-  filter: invert(100%) saturate(0);
-}
-header > .headerBody > .rightSideHeader > .discordButton {
-  background: none;
-  border: none;
-  font-weight: bold;
-  color: white;
-  vertical-align: middle;
-  font-family: "Rubik", sans-serif;
-  margin-right: 10px;
-  filter: invert(0%);
-  opacity: 0.85;
+header > .headerBody > .rightSideHeader > .bot-status {
+  font-size: 30px;
+  padding-left: 20px;
+  line-height: 0px;
+  top: 100px;
 }
 
-header > .headerBody > .rightSideHeader > a > .githubButton > img {
-  height: 60px;
-  cursor: pointer;
-  border-radius: 100%;
-}
-header > .headerBody > .rightSideHeader > .discordButton > img {
-  height: 60px;
-  opacity: 0.95;
-  cursor: pointer;
-  border-radius: 100%;
-}
-
-header > .headerBody > .rightSideHeader > a > .githubButton > img:hover {
-  filter: contrast(10);
-}
-
-header > .headerBody > .rightSideHeader > .discordButton > img:hover {
-  opacity: 1;
+header > .headerBody > .rightSideHeader > .bot-status>.status-icon{
+  width: 30px;
+  height: 35px;
 }
 
 p > img {
