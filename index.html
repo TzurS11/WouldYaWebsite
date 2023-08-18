@@ -1,127 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>WouldYa</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
-    <!-- discord embed -->
-    <meta content="WouldYa" property="og:title" />
-    <meta
-      content='A discord bot for the popular game "Would You Rather"'
-      property="og:description"
-    />
-    <meta content="http://www.wouldya.xyz/" property="og:url" />
-    <meta
-      content="http://www.wouldya.xyz/assets/favicon.png"
-      property="og:image"
-    />
-    <meta content="#5662f6" data-react-helmet="true" name="theme-color" />
 
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>WouldYa</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+  <!-- discord embed -->
+  <meta content="WouldYa" property="og:title" />
+  <meta content='A discord bot for the popular game "Would You Rather"' property="og:description" />
+  <meta content="http://www.wouldya.xyz/" property="og:url" />
+  <meta content="http://www.wouldya.xyz/assets/favicon.png" property="og:image" />
+  <meta content="#5662f6" data-react-helmet="true" name="theme-color" />
 
-  <body>
-    <header class="scroll-opacity">
-      <div class="headerBody">
-        <div class="leftSideHeader">
-          <img src="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" defer src="script.js"></script>
+  
+</head>
+
+<body>
+  <header class="scroll-opacity">
+    <div class="headerBody">
+      <div class="leftSideHeader">
+        <img src="assets/favicon.png" />
+        <div>
+          <p class="botName">WouldYa</p>
           <div>
-            <p class="botName">WouldYa</p>
-            <div>
-              <p class="bot-status"></p>
-              <p class="statstext"><p class="servercount"></p> Servers</p>
-            </div>
+            <p class="bot-status"></p>
+            <p class="statstext">
+            <p class="servercount"></p> Servers</p>
           </div>
-          <a href="index.html"><p class="pages">Home</p></a>
-          <a href="commands.html"><p class="pages">Commands</p></a>
-          <a href="https://github.com/TzurS11/WouldYouRather"
-            ><p class="pages">Github</p></a
-          >
-          <a onClick="alertPopup('A discord server is not available yet')"
-            ><p class="pages">Support</p></a
-          >
-          <!--<a href=""><p class="pages">Commands</p></a>
+        </div>
+        <!-- <a href="index.html"> -->
+        <p class="pages">Home</p>
+        <!-- </a> -->
+        <a href="commands.html">
+          <p class="pages">Commands</p>
+        </a>
+        <a href="https://github.com/TzurS11/WouldYouRather">
+          <p class="pages">Github</p>
+        </a>
+        <a onClick="alertPopup('A discord server is not available yet')">
+          <p class="pages">Support</p>
+        </a>
+        <!--<a href=""><p class="pages">Commands</p></a>
         <a href=""><p class="pages">Commands</p></a> -->
-        </div>
-        <div class="rightSideHeader">
-          <a href="invite.html" target="_blank"
-            ><button class="addToServer">Add To Server</button></a
-          >
-        </div>
       </div>
-      <div class="bottomOutline"></div>
-    </header>
-    <div style="height: 140px;"></div>
-    <!-- <div class="botstats">
+      <div class="rightSideHeader">
+        <a href="invite.html" target="_blank"><button class="addToServer">Add To Server</button></a>
+      </div>
+    </div>
+    <div class="bottomOutline"></div>
+  </header>
+  <div style="height: 140px;"></div>
+  <!-- <div class="botstats">
       <p id="countservers" class="rainbow-text">
         ENTERTAINING <span class="servercount">x</span> SERVERS!
       </p>
     </div> -->
-    <div class="features questions">
-      <p class="title">Questions</p>
-      <h class="description"
-        >There are <span class="discordColor questionsAmount">x</span> unique
-        questions and more are being added everyday!</h
-      >
-      <h class="example">"Would you rather electricity or water?"</h>
-      <h class="example"
-        >"Would you rather clean your own home or hire someone to do it for
-        you?"</h
-      >
-      <h class="example"
-        >"Would you rather have no emotions or be able to deeply feel every
-        little thing?"</h
-      >
+  <div class="features questions">
+    <p class="title">Questions</p>
+    <h class="description">There are <span class="discordColor questionsAmount">x</span> unique
+      questions and more are being added everyday!</h>
+    <h class="example">"Would you rather electricity or water?"</h>
+    <h class="example">"Would you rather clean your own home or hire someone to do it for
+      you?"</h>
+    <h class="example">"Would you rather have no emotions or be able to deeply feel every
+      little thing?"</h>
 
-      <h class="description"
-        >Boost your server interaction and activity.<br />Talk about questions
-        and choises with your friends and vote on every question.</h
-      >
-      <h class="example"
-        >Voting is global across all servers. You may choose to make your
-        account private.</h
-      >
-      <div class="interactionButtonsRow">
-        <button class="interactionButton left">
-          <img
-            src="https://cdn.discordapp.com/emojis/1068289807249309747.webp?size=44&quality=lossless"
-          />
-        </button>
-        <button class="interactionButton right">
-          <img
-            src="https://cdn.discordapp.com/emojis/1068289822592077864.webp?size=44&quality=lossless"
-          />
-        </button>
+    <h class="description">Boost your server interaction and activity.<br />Talk about questions
+      and choices with your friends and vote on every question.</h>
+    <h class="example">Voting is global across all servers. You may choose to make your
+      account private.</h>
+    <div class="interactionButtonsRow">
+      <button class="interactionButton left">
+        <img src="https://cdn.discordapp.com/emojis/1068289807249309747.webp?size=44&quality=lossless" />
+      </button>
+      <button class="interactionButton right">
+        <img src="https://cdn.discordapp.com/emojis/1068289822592077864.webp?size=44&quality=lossless" />
+      </button>
+    </div>
+  </div>
+  <div class="features interactions"></div>
+  <div class="features suggestions">
+    <p class="title">Suggestions</p>
+    <h class="description">Get involved in the community by suggesting questions.<br />You will be
+      notified if your question is accepted or denied.</h>
+    <h class="example">Suggesting troll questions will limit your access to the bot.</h>
+  </div>
+  <div class="features stats">
+    <p class="title">Stats</p>
+    <h class="description">Get your stats or someone else's stats. Voting ratio, Amount of
+      questions answered, and more in the future</h>
+    <h class="example">this feature is currently WIP and is subject to change in the
+      future.<br />it is currently not possible to set your profile
+      private.</h>
+  </div>
+  <div id="floatmessage" class="float-message" style="display: none">
+    <div class="float-message-inner" id="floatmessageinner">
+      <p>Copied command to clipboard</p>
+    </div>
+  </div>
+  <footer>
+    <div class="upperOutline"></div>
+    <div class="footerBody">
+      <div>
+        <p class="footerTitle">Pages</p>
+        <p class="footerDescription">Home</p>
+        <a href="commands.html">
+          <p class="footerDescription">Commands</p>
+        </a>
+        <a href="https://github.com/TzurS11/WouldYouRather">
+          <p class="footerDescription">Github</p>
+        </a>
+        <a onclick="alertPopup('A discord server is not available yet')">
+          <p class="footerDescription">Support</p>
+        </a>
+      </div>
+      <div>
+        <p class="footerTitle">Contact Us</p>
+        <a href="mailto:support@wouldya.xyz">
+          <p class="footerDescription">Email</p>
+        </a>
+        <!-- <a onclick="alertPopup('Copied discordname to ')">
+           <p class="footerDescription clickable" onclick="alertPopup(`copied username to clipBoard`)">Discord</p>
+        </a> -->
+        <p class="footerDescription"> </p>
+        <p class="footerDescription"> </p>
+        <p class="footerDescription"> </p>
+      </div>
+      <div>
+        <p style="opacity: 0.6; text-align: center;">© All rights reserved to Wouldya 2023<br>This bot is in no way
+          affiliated with discord.
+        </p>
       </div>
     </div>
-    <div class="features interactions"></div>
-    <div class="features suggestions">
-      <p class="title">Suggestions</p>
-      <h class="description"
-        >Get involved in the community by suggesting questions.<br />You will be
-        notified if your question is accepted or denied.</h
-      >
-      <h class="example"
-        >Suggesting troll questions will limit your access to the bot.</h
-      >
-    </div>
-    <div class="features stats">
-      <p class="title">Stats</p>
-      <h class="description"
-        >Get your stats or someone else's stats. Voting ratio, Amount of
-        questions answered, and more in the future</h
-      >
-      <h class="example"
-        >this feature is currently WIP and is subject to change in the
-        future.<br />it is currently not possible to set your profile
-        private.</h
-      >
-    </div>
-    <div id="floatmessage" class="float-message" style="display: none">
-      <div class="float-message-inner" id="floatmessageinner">
-        <p>Copied command to clipboard</p>
-      </div>
-    </div>
-  </body>
+
+  </footer>
+</body>
+
 </html>
