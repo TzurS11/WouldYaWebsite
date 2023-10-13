@@ -67,12 +67,6 @@ p {
   height: 100px;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
 
 header > .headerBody {
   background-color: var(--secondary);
