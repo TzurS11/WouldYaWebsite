@@ -1,142 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WouldYa</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>WouldYa</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
-  <!-- discord embed -->
-  <meta content="WouldYa Commands" property="og:title" />
-  <meta content='A discord bot for the popular game "Would You Rather"' property="og:description" />
-  <meta content="http://www.wouldya.xyz/commands" property="og:url" />
-  <meta content="http://www.wouldya.xyz/assets/favicon.png" property="og:image" />
-  <meta content="#5662f6" data-react-helmet="true" name="theme-color" />
+    <!-- discord embed -->
+    <meta content="WouldYa Commands" property="og:title" />
+    <meta
+      content="Check the list of commands Wouldya has to offer!"
+      property="og:description"
+    />
+    <meta content="http://www.wouldya.xyz/commands" property="og:url" />
+    <meta
+      content="http://www.wouldya.xyz/assets/favicon.png"
+      property="og:image"
+    />
+    <meta content="#5662f6" data-react-helmet="true" name="theme-color" />
 
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-
-<body>
-  <div class="background" id="backgroundbubbles"></div>
-  <header class="scroll-opacity">
-    <div class="headerBody">
-      <div class="leftSideHeader">
-        <img src="assets/favicon.png" />
-        <div>
-          <p class="botName">WouldYa</p>
-          <div>
-            <p class="bot-status"></p>
-            <p class="statstext">
-            <p class="servercount"></p> Servers</p>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <div class="branding">
+          <img src="assets/favicon.png" />
+          <div class="titles">
+            <p class="main">WouldYa</p>
+            <p class="sub">Would You Rather Discord bot</p>
           </div>
         </div>
-        <a href="index.html">
-          <p class="pages">Home</p>
-        </a>
-        <!-- <a href="commands.html"> -->
-        <p class="pages">Commands</p>
-        <!-- </a> -->
-        <a href="https://github.com/TzurS11/WouldYouRather">
-          <p class="pages">Github</p>
-        </a>
-        <a onClick="alertPopup('A discord server is not available yet')">
-          <p class="pages">Support</p>
-        </a>
-        <!--<a href=""><p class="pages">Commands</p></a>
-      <a href=""><p class="pages">Commands</p></a> -->
+        <div class="paging">
+          <a href="/">Home</a><a href="/commands.html">Commands</a
+          ><a href="https://github.com/TzurS11/WouldYouRather" target="_blank"
+            >Github</a
+          >
+          <a href="/api">API</a>
+        </div>
       </div>
-      <div class="rightSideHeader">
-        <a href="invite.html" target="_blank"><button class="addToServer">Add To Server</button></a>
+      <div class="right">
+        <a
+          href="https://discord.com/oauth2/authorize?client_id=1063817771114315816&permissions=3072&scope=bot%20applications.commands"
+          target="_blank"
+          ><button class="invite">Add To Server</button></a
+        >
       </div>
-    </div>
-    <div class="bottomOutline"></div>
-  </header>
-  <!-- <div style="height: 140px;"></div> -->
-  <div class="features questions">
-
-    <p class="title">Questions
-    <p class="command" onclick="copyToClipboardAndPopup('/question')">/question</p>
-    </p>
-    <h class="description">Chooses a random Would You Rather question from the database.<br>Replies with the question
-      and buttons to interact with it</h>
-    <h class="example">To prevent spamming the chat with embeds there is a green button to reroll a question.</h>
-  </div>
-  </div>
-  <div class="features suggestions">
-    <p class="title">Suggestions
-    <p class="command" onclick="copyToClipboardAndPopup('/suggest')">/suggest</p>
-    </p>
-    <h class="description">The command will ask for a text which will have the question in it.<br>You may phrase your
-      question however you like but it will be rephrased to better fit the bot<br>You will get a DM from the bot if you
-      question was approved or denied</h>
-    <h class="example">Suggesting troll questions will limit your access to the bot.</h>
-  </div>
-  <div class="features stats">
-    <p class="title">User Stats - WIP
-    <p class="command" onclick="copyToClipboardAndPopup('/stats')">/stats</p>
-    </p>
-    <h class="description">The command will ask you to put an id of a user. if kept empty it will choose your id.<br>
-      Amount of questions answered, answer ratio, and more in the future</h>
-    <h class="example">this feature is currently work in progress and is subject to change in the future.<br>it is
-      currently not
-      possible to set your profile private.</h>
-  </div>
-  <div class="features stats">
-    <p class="title">Top Answered Questions
-    <p class="command" onclick="copyToClipboardAndPopup('/top')">/top</p>
-    </p>
-    <h class="description">Get the most answered question in the database.</h>
-  </div>
-  <div class="features stats">
-    <p class="title">Amount Of Questions
-    <p class="command" onclick="copyToClipboardAndPopup('/amount')">/amount</p>
-    </p>
-    <h class="description">Get the amount of available questions in the database.</h>
-  </div>
-  <div id="floatmessage" class='float-message' style="display:none;">
-    <div class='float-message-inner' id="floatmessageinner">
-      <p>Copied command to clipboard</p>
-    </div>
-  </div>
-
-  <div class="botstats">
-    <p id="comebackfeatures" class>Come back in the future for more features!</p>
-  </div>
-  <footer>
-    <div class="upperOutline"></div>
-    <div class="footerBody">
-      <div>
-        <p class="footerTitle">Pages</p>
-        <a href="index.html">
-          <p class="footerDescription">Home</p>
-        </a>
-        <p class="footerDescription">Commands</p>
-        <a href="https://github.com/TzurS11/WouldYouRather">
-          <p class="footerDescription">Github</p>
-        </a>
-        <a onclick="alertPopup('A discord server is not available yet')">
-          <p class="footerDescription">Support</p>
-        </a>
+    </header>
+    <!-- <div class="seperator"></div> -->
+    <div class="content">
+      <div class="feature left">
+        <h1>Questions</h1>
+        <p class="command">/question</p>
+        <h2>Chooses a random Would You Rather question from the database.</h2>
+        <h2>Replies with the question and buttons to interact with it.</h2>
+        <h3>
+          To prevent spamming the chat with embeds there is a green button to
+          reroll a question.
+        </h3>
       </div>
-      <div>
-        <p class="footerTitle">Contact Us</p>
-        <a href="mailto:support@wouldya.xyz">
-          <p class="footerDescription">Email</p>
-        </a>
-        <!-- <a onclick="alertPopup('Copied discordname to ')">
-           <p class="footerDescription clickable" onclick="alertPopup(`copied username to clipBoard`)">Discord</p>
-        </a> -->
-        <p class="footerDescription"> </p>
-        <p class="footerDescription"> </p>
-        <p class="footerDescription"> </p>
+      <div class="feature right">
+        <h1>Suggestions</h1>
+        <p class="command">/suggest</p>
+        <h2>
+          The command will ask for a text which will have the question in it.
+        </h2>
+        <h2>
+          You may phrase your question however you like but it will be rephrased
+          to better fit the bot.
+        </h2>
+        <h2>
+          You will get a DM from the bot if you question was approved or denied.
+        </h2>
+        <h3>Suggesting troll questions will limit your access to the bot.</h3>
       </div>
-      <div>
-        <p style="opacity: 0.6; text-align: center;">© All rights reserved to Wouldya.<br>This bot is in no way affiliated with discord.
-        </p>
+      <div class="feature left">
+        <h1>User Stats - WIP</h1>
+        <p class="command">/stats</p>
+        <h2>
+          The command will ask you to put an id of a user. if kept empty it will
+          choose your id.
+        </h2>
+        <h2>
+          Amount of questions answered, answer ratio, and more in the future.
+        </h2>
+        <h3>
+          this feature is currently work in progress and is subject to change in
+          the future.
+        </h3>
+        <h3>it is currently not possible to set your profile private.</h3>
+      </div>
+      <div class="feature right">
+        <h1>Top Answered Questions</h1>
+        <p class="command">/top</p>
+        <h2>Get the most answered question in the database.</h2>
+      </div>
+      <div class="feature left">
+        <h1>Amount Of Quetsions</h1>
+        <p class="command">/amount</p>
+        <h2>Get the amount of available questions in the database.</h2>
+        <h3>The bot contains more questions than the public API has.</h3>
       </div>
     </div>
-
-  </footer>
-</body>
-
+    <footer>
+      <div class="region">
+        <p class="title">Pages</p>
+        <a href="/">Home</a>
+        <a href="/commands.html">Commands</a>
+        <a href="https://github.com/TzurS11/WouldYouRather" target="_blank"
+          >Github</a
+        >
+        <a href="/api">API</a>
+      </div>
+      <div class="region">
+        <p class="title">Contact Us</p>
+        <a class="no-line-break" href="mailto:support@wouldya.xyz"
+          >Email: support@wouldya.xyz</a
+        >
+      </div>
+      <p class="copyright">
+        © All rights reserved to Wouldya 2024<br />
+        This bot is in no way affiliated with discord.
+      </p>
+    </footer>
+  </body>
 </html>

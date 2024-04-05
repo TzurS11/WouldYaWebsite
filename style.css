@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Zen+Dots&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
   --primary: rgb(44, 44, 44);
   --secondary: rgb(61, 61, 61);
@@ -7,175 +6,98 @@
 }
 
 body {
-  background-color: var(--primary);
+  display: block;
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
-  color: white;
-  background: #333;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.05) 0.1em,
-      transparent 0.1em
-    ),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0.1em, transparent 0.1em);
-  background-size: 2em 2em;
+  background-color: var(--primary);
+  background-image: url("assets/background.png");
+  /* background-repeat: repeat; */
+  /* background-repeat:repeat-x; */
 }
 
-a {
-  cursor: pointer;
-}
+header {
+  /* width: 100vw; */
 
-p {
-  word-wrap: break-word;
-}
-
-/* @keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-    margin-left: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--secondary);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-.background {
-  position: fixed;
-  z-index: 0;
-}
-
-.background > .bubble {
-  height: 100px;
-}
-
-
-header > .headerBody {
-  background-color: var(--secondary);
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  background-color: var(--secondary);
   flex-wrap: wrap;
-}
-
-header > .bottomOutline {
-  background: linear-gradient(
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  align-items: center;
+  border-width: 10px;
+  border-image-slice: 1;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  border-image-source: linear-gradient(
     90deg,
     rgb(44, 44, 44) 0%,
     rgba(230, 230, 230, 1) 50%,
     rgb(44, 44, 44) 100%
   );
+  .left,
+  .right {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+  }
+}
+
+header::after {
   height: 10px;
+  background-color: red;
 }
 
-header > .headerBody > .leftSideHeader {
+.branding {
+  justify-content: center;
   display: flex;
   align-items: center;
-  margin-left: 20px;
   flex-wrap: wrap;
-}
-.botName {
-  margin: 0;
-  font-size: 60px;
-  line-height: 1.2;
-
-  display: inline-block;
-  letter-spacing: 3px;
-  padding-top: 5px;
-  padding-bottom: 0;
-  margin-top: 5px;
-  margin-bottom: 0;
-  border-radius: 20px;
-  /* background-color: rgb(55, 55, 55); */
-  padding-left: 20px;
-  padding-right: 20px;
-  /* transition: letter-spacing 0.5s; */
-}
-
-header > .headerBody > .leftSideHeader > img {
-  width: 60px;
-  margin-left: 20px;
-}
-
-.bot-status {
-  display: inline-block;
-  font-size: 20px;
-  margin-left: 20px;
-  margin-top: 0;
-  line-height: 0;
-  margin-bottom: 0;
+  gap: 10px;
+  img {
+    aspect-ratio: 1/1;
+    height: 70px;
+  }
+  p {
+    margin: 0;
+  }
+  .titles {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .titles > .main {
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+  }
+  .titles > .sub {
+    color: white;
+    font-size: 15px;
+  }
 }
 
-.bot-status > .status-icon {
-  display: inline-block;
-  aspect-ratio: 1/1;
-  width: 15px;
-  height: 15px;
-  line-height: 0;
-  margin-bottom: 0;
-}
-
-.servercount {
-  font-size: 20px;
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.statstext {
-  font-size: 20px;
-  display: inline-block;
-  margin-left: 20px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-header > .headerBody > .leftSideHeader > .pages,
-a {
-  text-decoration: none;
-  margin: 0;
-  margin-left: 30px;
-  padding: 0;
-  color: #d3d3d3;
-  font-size: large;
-}
-header > .headerBody > .leftSideHeader > .pages,
-a :hover {
+.paging {
   color: white;
-  transition: color 0.17s;
-}
-
-header > .headerBody > .rightSideHeader {
+  font-size: x-large;
   display: flex;
-  margin-right: 10px;
-  border-radius: 20px;
-  /* background-color: rgb(55, 55, 55); */
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
-header > .headerBody > .rightSideHeader > a > .addToServer {
+.invite {
   background-color: var(--discord);
   border: none;
   border-radius: 30px;
@@ -191,227 +113,17 @@ header > .headerBody > .rightSideHeader > a > .addToServer {
   /* margin-right: 40px; */
   cursor: pointer;
 }
-header > .headerBody > .rightSideHeader > a > .addToServer:hover {
+
+.invite:hover {
   filter: saturate(2);
 }
 
-p > img {
-  display: inline;
-  height: 60px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.features {
-  --margin: 300px;
-  background-color: var(--secondary);
-  border-radius: 20px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  /* margin-left: var(--margin);
-  margin-right: var(--margin); */
-  box-shadow: 0 10px 30px 1px rgba(0, 0, 0, 0.5);
-}
-
-.features > .title {
-  display: block;
-  margin: 0;
-  font-size: 40px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-left: 20px;
-  padding-top: 10px;
-}
-
-.features > .command {
-  display: inline-block;
-  background-color: rgba(61, 66, 112, 255);
-  margin: 0;
-  font-size: 20px;
-  padding: 5px;
-  margin-top: 10px;
-  border-radius: 10px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-left: 20px;
-  transition: background-color 0.17s;
-  cursor: pointer;
-}
-.features > .command:hover {
-  background-color: rgba(88, 101, 242, 255);
-}
-
-.features > .description {
-  display: block;
-  margin: 0;
-  font-size: 30px;
-  letter-spacing: 1px;
-  margin-left: 20px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-}
-.features > .description > .discordColor {
-  color: var(--discord);
-  font-weight: bold;
-}
-.features > .example {
-  display: block;
-  margin: 0;
-  opacity: 0.5;
-  font-style: italic;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-left: 20px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-}
-
-.interactionButtonsRow {
-  margin-left: 20px;
-  padding-bottom: 10px;
-}
-
-.interactionButtonsRow > .interactionButton {
-  border-radius: 5px;
-  transition: background-color 0.17s;
-  border: none;
-  width: 110px;
-  height: 50px;
-  cursor: pointer;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.interactionButton.left {
-  background-color: rgba(218, 55, 60, 255);
-}
-.interactionButton.left:hover {
-  background-color: rgba(161, 40, 40, 255);
-}
-.interactionButton.left:active {
-  background-color: rgba(143, 32, 34, 255);
-}
-
-.interactionButton.right {
-  background-color: rgba(88, 101, 242, 255);
-}
-.interactionButton.right:hover {
-  background-color: rgba(71, 82, 196, 255);
-}
-.interactionButton.right:active {
-  background-color: rgba(60, 69, 165, 255);
-}
-
-.float-message {
-  position: fixed;
-  z-index: 1001;
-  max-width: 400px;
-  bottom: 20px;
-  right: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  color: black;
-  font-size: 16px;
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-}
-.float-message-inner {
-  position: relative;
-}
-
-.botstats {
-  text-align: center;
-  justify-content: space-between;
-  background: linear-gradient(
-    90deg,
-    rgba(44, 44, 44, 0) 0%,
-    rgba(230, 230, 230, 0.1) 50%,
-    rgba(44, 44, 44, 0) 100%
-  );
-  /* height: 10px; */
-  z-index: 100;
-  margin-top: 20px;
-}
-
-.botstats > p {
-  display: inline-block;
-  font-size: 60px;
-  margin: 0;
-  font-weight: bold;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.rainbow-text {
-  background-image: repeating-linear-gradient(
-    90deg,
-    violet,
-    rgb(0, 132, 255),
-    green,
-    orange,
-    red,
-    violet
-  );
-  text-align: center;
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 24px;
-  animation: rainbow 8s ease infinite;
-}
-
-@keyframes rainbow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 25%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-footer > .footerBody {
-  padding-left: 300px;
-  padding-right: 300px;
-  justify-content: space-between;
+.right {
   display: flex;
-  padding-bottom: 10px;
-  background-color: var(--secondary);
-}
-footer > .footerBody > div {
-  flex: 1;
-  place-items: center;
-  display: grid;
+  justify-content: center;
 }
 
-footer > .footerBody > div > * {
-  display: block;
-}
-footer > .footerBody > div > .footerTitle {
-  margin: 0;
-  margin-bottom: 5px;
-  margin-top: 10px;
-  font-size: 30px;
-}
-
-footer > .footerBody > div > .clickable {
-  cursor: pointer;
-  color: white;
-}
-
-.footerDescription {
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-footer > .upperOutline {
+.seperator {
   background: linear-gradient(
     90deg,
     rgb(44, 44, 44) 0%,
@@ -419,14 +131,192 @@ footer > .upperOutline {
     rgb(44, 44, 44) 100%
   );
   height: 10px;
+  width: 100%;
 }
 
-footer > .footerBody > div > a {
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
+.content {
+  padding: 40px;
+  padding-right: 10%;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  .sub {
+    gap: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    img {
+      height: 100px;
+    }
+  }
+  .feature {
+    .command {
+      margin: 0;
+      font-size: x-large;
+      background-color: #3d4270;
+      width: fit-content;
+      padding: 5px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    cursor: pointer;
+    }
+    .command:hover{
+      background-color: #5865f2;
+    }
+    /* .question-amount {
+      color: var(--discord);
+      font-weight: 900;
+    } */
+
+    .mark-discord-white {
+      color: var(--discord);
+      font-weight: 900;
+      background-color: rgba(255, 255, 255, 0.356);
+      padding: 3px;
+      border-radius: 10px;
+    }
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.37);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.404);
+    width: 60%;
+    color: white;
+    /* height: 100px; */
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.35);
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease-in-out;
+  }
+  .feature:hover {
+    h1 {
+      letter-spacing: 5px;
+    }
+    backdrop-filter: blur(10px);
+    transition: all 0.25s ease-in-out;
+    translate: 0px -5px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255);
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  h1 {
+    transition: all 0.25s ease-in-out;
+    color: var(--discord);
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  h3 {
+    font-style: italic;
+    color: gray;
+    margin-bottom: 2.5px;
+  }
+
+  .feature.left {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    align-self: flex-start;
+  }
+  .feature.right {
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    align-self: flex-end;
+  }
 }
-footer > .footerBody > div > a :hover {
+
+@media screen and (max-device-width: 1400px) {
+  .content {
+    padding-right: 40px;
+    padding-left: 40px;
+    .feature {
+      width: 100%;
+    }
+    .feature.right,
+    .feature.left {
+      align-self: center;
+    }
+  }
+}
+
+footer {
+  border-width: 10px;
+  border-image-slice: 1;
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(44, 44, 44) 0%,
+    rgba(230, 230, 230, 1) 50%,
+    rgb(44, 44, 44) 100%
+  );
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  flex-wrap: wrap;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  row-gap: 20px;
+  /* align-items: center; */
   color: white;
-  transition: color 0.17s;
+  p {
+    margin: 0;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .region {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    .no-line-break {
+      text-wrap: nowrap;
+    }
+    .title {
+      font-size: x-large;
+    }
+  }
+
+  .copyright {
+    margin: 0;
+    color: gray;
+    align-self: center;
+    /* text-align: center; */
+  }
+}
+
+@media screen and (max-device-width: 1400px) {
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-device-width: 1400px) {
+  .hidden-mobile {
+    display: none;
+  }
 }
