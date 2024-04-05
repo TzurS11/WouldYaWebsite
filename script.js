@@ -3,9 +3,10 @@ fetch("https://api.wouldya.xyz/bot/stats")
     res.json();
   })
   .then((data) => {
-    let questionamount = document.getElementsByClassName("question-amount");
-    for (let i = 0; i < questionamount.length; i++) {
-      const element = questionamount[i];
+    console.log(data)
+    let questionamountDivs = document.getElementsByClassName("question-amount");
+    for (let i = 0; i < questionamountDivs.length; i++) {
+      const element = questionamountDivs[i];
       element.innerText = data.questionAmount;
     }
     let serveramount = document.getElementsByClassName("server-amount");
