@@ -320,6 +320,8 @@ footer {
 
 @media screen and (max-device-width: 1200px) {
   footer {
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     .region {
       .no-line-break {
