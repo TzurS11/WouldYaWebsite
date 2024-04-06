@@ -34,6 +34,7 @@ header {
   border-left-style: none;
   border-right-style: none;
   border-top-style: none;
+  row-gap: 20px;
   border-image-source: linear-gradient(
     90deg,
     rgb(44, 44, 44) 0%,
@@ -42,6 +43,8 @@ header {
   );
   .left,
   .right {
+    justify-content: center;
+    row-gap: 20px;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -159,9 +162,9 @@ header::after {
       padding: 5px;
       border-radius: 10px;
       margin-bottom: 20px;
-    cursor: pointer;
+      cursor: pointer;
     }
-    .command:hover{
+    .command:hover {
       background-color: #5865f2;
     }
     /* .question-amount {
@@ -315,8 +318,18 @@ footer {
   }
 }
 
-@media screen and (max-device-width: 1400px) {
-  .hidden-mobile {
-    display: none;
+@media screen and (max-device-width: 1200px) {
+  footer {
+    text-align: center;
+    .region {
+      .no-line-break {
+        text-wrap: pretty;
+      }
+    }
+  }
+  header {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
   }
 }
