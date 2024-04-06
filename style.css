@@ -320,8 +320,9 @@ footer {
 
 @media screen and (max-device-width: 1200px) {
   footer {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    column-gap: 50px;
     * {
       text-align: center;
     }
