@@ -245,6 +245,14 @@ header::after {
     );
     align-self: flex-end;
   }
+  .feature.center {
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    align-self: center;
+  }
 }
 
 @media screen and (max-device-width: 1400px) {
@@ -255,7 +263,8 @@ header::after {
       width: 100%;
     }
     .feature.right,
-    .feature.left {
+    .feature.left,
+    .feature.center {
       align-self: center;
     }
   }
